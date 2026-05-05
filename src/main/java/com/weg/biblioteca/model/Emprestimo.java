@@ -2,7 +2,6 @@ package com.weg.biblioteca.model;
 
 import java.time.LocalDate;
 
-import org.springframework.cglib.core.Local;
 
 public class Emprestimo {
 
@@ -24,6 +23,28 @@ public class Emprestimo {
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
+
+    
+
+    
+    public Emprestimo(long id, long livroId, long usuarioId, LocalDate dataEmprestimo) {
+        this.id = id;
+        this.livroId = livroId;
+        this.usuarioId = usuarioId;
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
+    
+    public Emprestimo(long livroId, long usuarioId, LocalDate dataEmprestimo) {
+        this.livroId = livroId;
+        this.usuarioId = usuarioId;
+        this.dataEmprestimo = dataEmprestimo;
+    }
+    public Emprestimo() {
+    }
+
+    
+
     public long getId() {
         return id;
     }

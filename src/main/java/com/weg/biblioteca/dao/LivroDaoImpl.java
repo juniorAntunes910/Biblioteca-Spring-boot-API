@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,16 +14,16 @@ import com.weg.biblioteca.infra.ConnectionFactory;
 import com.weg.biblioteca.model.Livro;
 
 @Repository
-public class LivroDaoImpl {
+public class LivroDaoImpl implements LivroDao {
     private ConnectionFactory connectionFactory;
 
     public LivroDaoImpl(ConnectionFactory connectionFactory) {
         this.connectionFactory = connectionFactory;
     }
 
-    public Livro salvar(Livro livro) {
+    public Livro salvar(Livro livro) throws SQLException {
         String command = """
-                INSERT INTO livros
+                INSERT INTO livro
                 (titulo, autor, ano_publicacao)
                 VALUES
                 (?,?,?)
@@ -33,20 +32,17 @@ public class LivroDaoImpl {
                 PreparedStatement stmt = conn.prepareStatement(command, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, livro.getTitulo());
             stmt.setString(2, livro.getAutor());
-            stmt.setObject(3, livro.getAnoPublicacao());
+            stmt.setInt(3, livro.getAnoPublicacao());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next()) {
                 livro.setId(rs.getLong(1));
             }
             return livro;
-        } catch (SQLException e) {
-            System.out.println(e);
         }
-        return null;
     }
 
-    public List<Livro> buscarTodos() {
+    public List<Livro> buscarTodos() throws SQLException {
         String command = """
                 SELECT id,
                     titulo,
@@ -64,16 +60,14 @@ public class LivroDaoImpl {
                                 rs.getLong("id"),
                                 rs.getString("titulo"),
                                 rs.getString("autor"),
-                                rs.getObject("ano_publicacao", LocalDate.class)));
+                                rs.getInt("ano_publicacao")));
                 return listLivros;
             }
-        } catch (SQLException e) {
-            System.out.println(e);
         }
         return null;
     }
 
-    public Livro buscarPorID(long id) {
+    public Livro buscarPorID(long id) throws SQLException {
         String command = """
                 SELECT id,
                     titulo,
@@ -91,15 +85,13 @@ public class LivroDaoImpl {
                         rs.getLong("id"),
                         rs.getString("titulo"),
                         rs.getString("autor"),
-                        rs.getObject("ano_publicacao", LocalDate.class));
+                        rs.getInt("ano_publicacao"));
             }
-        } catch (SQLException e) {
-            System.out.println(e);
         }
         return null;
     }
 
-    public void atualizar(Livro livro, long id) {
+    public void atualizar(Livro livro, long id) throws SQLException {
         String command = """
                 UPDATE livro
                 SET titulo = ?,
@@ -115,23 +107,19 @@ public class LivroDaoImpl {
             stmt.setLong(4, id);
             stmt.executeUpdate();
 
-        } catch (SQLException e) {
-            System.out.println(e);
         }
     }
 
-    public void deletar(long id){
+    public void deletar(long id) throws SQLException {
         String command = """
                 DELETE FROM livro
                 WHERE id = ?
                 """;
-                           try(Connection conn = connectionFactory.conexao();
-            PreparedStatement stmt = conn.prepareStatement(command)){
-                stmt.setLong(1, id);
-                stmt.executeUpdate();
-                      } catch(SQLException e){
-                System.out.println(e);
-            }
+        try (Connection conn = connectionFactory.conexao();
+                PreparedStatement stmt = conn.prepareStatement(command)) {
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        }
     }
-    
+
 }

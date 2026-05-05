@@ -1,0 +1,50 @@
+Date : 2026-05-05 09:19:42
+Directory : c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca
+Total : 20 files,  985 codes, 0 comments, 222 blanks, all 1207 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Java     |         20 |        985 |          0 |        222 |      1,207 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                   |         20 |        985 |          0 |        222 |      1,207 |
+| . (Files)                                                                                                           |          1 |          9 |          0 |          5 |         14 |
+| controller                                                                                                          |          3 |        201 |          0 |         45 |        246 |
+| dao                                                                                                                 |          6 |        413 |          0 |         69 |        482 |
+| infra                                                                                                               |          1 |         18 |          0 |          8 |         26 |
+| model                                                                                                               |          3 |        128 |          0 |         17 |        145 |
+| service                                                                                                             |          6 |        216 |          0 |         78 |        294 |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                            | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\BibliotecaApplication.java           | Java     |          9 |          0 |          5 |         14 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\controller\EmprestimoController.java | Java     |         67 |          0 |         18 |         85 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\controller\LivroController.java      | Java     |         67 |          0 |         13 |         80 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\controller\UsuarioController.java    | Java     |         67 |          0 |         14 |         81 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\EmprestimoDao.java               | Java     |         12 |          0 |          9 |         21 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\EmprestimoDaoImpl.java           | Java     |        156 |          0 |         14 |        170 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\LivroDao.java                    | Java     |         11 |          0 |         11 |         22 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\LivroDaoImpl.java                | Java     |        114 |          0 |         13 |        127 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\UsuarioDao.java                  | Java     |         11 |          0 |         10 |         21 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\dao\UsuarioDaoImpl.java              | Java     |        109 |          0 |         12 |        121 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\infra\ConnectionFactory.java         | Java     |         18 |          0 |          8 |         26 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\model\Emprestimo.java                | Java     |         52 |          0 |          7 |         59 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\model\Livro.java                     | Java     |         43 |          0 |          5 |         48 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\model\Usuario.java                   | Java     |         33 |          0 |          5 |         38 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\EmprestimoService.java       | Java     |         11 |          0 |         10 |         21 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\EmprestimoServiceImpl.java   | Java     |         70 |          0 |         18 |         88 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\LivroService.java            | Java     |         11 |          0 |         10 |         21 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\LivroServiceImpl.java        | Java     |         58 |          0 |         14 |         72 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\UsuarioService.java          | Java     |         11 |          0 |         12 |         23 |
+| c:\Users\junior_ga_souza\Downloads\biblioteca\src\main\java\com\weg\biblioteca\service\UsuarioServiceImpl.java      | Java     |         55 |          0 |         14 |         69 |
+| Total                                                                                                               |          |        985 |          0 |        222 |      1,207 |
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

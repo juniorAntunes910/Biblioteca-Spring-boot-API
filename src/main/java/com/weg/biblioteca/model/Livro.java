@@ -1,22 +1,24 @@
 package com.weg.biblioteca.model;
 
-import java.time.LocalDate;
 
 public class Livro {
     private long id;
     private String titulo;
     private String autor;
-    private LocalDate anoPublicacao;
-    public Livro( String titulo, String autor, LocalDate anoPublicacao) {
+    private int anoPublicacao;
+    public Livro( String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
     }
-    public Livro(long id, String titulo, String autor, LocalDate anoPublicacao) {
+    public Livro(long id, String titulo, String autor, int anoPublicacao) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
+    }
+ 
+    public Livro() {
     }
     public long getId() {
         return id;
@@ -36,10 +38,10 @@ public class Livro {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-    public LocalDate getAnoPublicacao() {
+    public int getAnoPublicacao() {
         return anoPublicacao;
     }
-    public void setAnoPublicacao(LocalDate anoPublicacao) {
+    public void setAnoPublicacao(int anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }
 
