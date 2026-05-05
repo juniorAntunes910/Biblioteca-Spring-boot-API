@@ -75,4 +75,12 @@ public class EmprestimoServiceImpl implements EmprestimoService {
         }
         emprestimoDao.deletar(id);
     }
+
+    @Override
+    public void devolver(long id) throws SQLException {
+        if(emprestimoDao.buscarPorID(id) == null){
+            throw new RuntimeErrorException(null, "O emprestimo não existe");
+        }
+        emprestimoDao.deletar(id);
+    }
 }

@@ -17,4 +17,6 @@ public interface EmprestimoService {
 
     public void deletar(long id) throws SQLException;
 
+    public void devolver(long id) throws SQLException;
+
 }

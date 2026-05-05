@@ -163,4 +163,21 @@ public class EmprestimoDaoImpl implements EmprestimoDao {
         return null;
     }
 
+    @Override
+    public void devolver(long id) throws SQLException {
+        String command = """
+                UPDATE emprestimos
+                SET data_devolucao = ?
+                WHERE id = ?
+                """;
+                try(Connection conn = connectionFactory.conexao(); 
+            PreparedStatement stmt = conn.prepareStatement(command)){
+                stmt.setObject(1, LocalDate.now());
+                stmt.setLong(2, id);
+                stmt.executeUpdate();
+            }
+    }
+
+    
+
 }

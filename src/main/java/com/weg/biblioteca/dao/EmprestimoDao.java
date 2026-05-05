@@ -17,4 +17,6 @@ public interface EmprestimoDao {
     public void deletar(long id) throws SQLException;
 
     public Emprestimo buscarPorLivro(long livroID) throws SQLException;
+
+    public void devolver(long id) throws SQLException;
 }

@@ -69,6 +69,17 @@ public class EmprestimoController {
         }
     }
 
+    @PutMapping("/{id}/devolucao")
+    public String devolucao(@PathVariable long id) {
+        try{
+            emprestimoService.devolver(id);
+            return "Devolvido com sucesso";
+        }catch(SQLException e){
+            return "Devolvido com sucesso";
+        }
+    }
+
+
     @DeleteMapping("/{id}")
     public String deletar(@PathVariable long id){
         try {
